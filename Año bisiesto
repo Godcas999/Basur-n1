@@ -1,0 +1,12 @@
+El siguiente código es para saber si algún año fué año bisiesto.
+Además, necesitas verificar si el año es divisible por 4 pero no por 100, a menos que también sea divisible por 400.
+En este código, % se usa para calcular el resto de la división (operador módulo). La expresión "a % 4 == 0" verifica si el año es divisible por 4. 
+Luego, (a % 100 != 0 or a % 400 == 0) verifica si el año no es divisible por 100 o si es divisible por 400. Si ambas condiciones son verdaderas, entonces el año es bisiesto.
+
+################################################################
+
+a = int(input())
+if a % 4 == 0 and (a % 100 != 0 or a % 400 == 0):
+    print("Bisiesto")
+else:
+    print("No bisiesto")
