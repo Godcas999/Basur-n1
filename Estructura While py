@@ -1,0 +1,16 @@
+# Función while
+
+# Escribe un programa que pida al usuario un número entero positivo y luego imprima todos los números desde 1 hasta ese número. 
+# Si el usuario introduce un número negativo o cero, el programa debe volver a pedir el número hasta que 
+# el usuario introduzca un número positivo.
+
+a = int(input("Introduce un entero positivo: "))
+
+if a <= 0: 
+  print("Ese no es un número enetero positivo. ")
+else:
+  i = 1
+  while i <= a:
+    print(i)
+    i += 1    # Muy importante, dado que al terminar de enviar el valor anterior, se va sumando uno en uno hasta igualar y cerrar el 
+              # ciclo while
