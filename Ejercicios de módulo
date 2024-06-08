@@ -12,3 +12,67 @@ else:
     print("El número es impar")
 
 ##########################################################################
+########################### Números primos ###############################
+##########################################################################
+
+ Un número primo (p) está definido como un número entero positivo mayor que uno
+ que no es divisible por ningún otro número n más que el 1 y él mismo.
+ O sea p % n != 0
+
+def es_primo(n):
+    if n <= 1:
+        return False
+    if n <= 3:
+        return True
+    if n % 2 == 0 or n % 3 == 0:    # Los números pares y los que son divisibles por 3 NO son primos.
+        return False
+
+    i = 5    # Habiendo excluido los múltiplos de 2 y 3, entonces ahora restringiremos en 5 en 5 hasta que l valor i sea menor o igual a la raiz de n
+    while i * i <= n:
+        if n % i == 0 or n % (i + 2) == 0:    # Regresa un valor falso para los que aumentan de 7 en 7 también 
+            return False
+        i += 6    Aumenta en 6
+    return True
+# Aquí se devuelve un valor booleano ya sea Verdadero o Falso,
+# en caso de no cumplir las condiciones de la función se regresa el valor como Falso,
+# en el caso contrario, la función "es_primo" regresará un valor Verdadero.
+
+n = int(input("Introduce un número: "))
+if es_primo(n):
+    print("Es un número primo.")
+else:
+    print("No es un número primo.") 
+
+##########################################################################
+########################## Números primos 2 ##############################
+##########################################################################
+
+def es_primo(n):
+    if n <= 1:
+        return False
+    if n <= 3:
+        return True
+    if n % 2 == 0 or n % 3 == 0:
+        return False
+    i = 5
+    while i*i <= n:
+        if n % i == 0 or n % (i + 2) == 0:
+            return False
+        i += 6
+    return True
+
+n = int(input("Introduce un número a identificar: "))
+if es_primo(n):
+    print("Es un número primo.")
+else:
+    print("No es un número primo")
+
+
+    
+
+
+
+
+
+
+
