@@ -1,0 +1,19 @@
+# Identificar si dado un número es primo.
+
+a = int(input("Introduzca un número entero a identificar: "))
+
+if a == 1:
+    print("No es primo :(")
+if a <= 0:
+    print("Debe de ser un número entero positivo")
+else:
+    es_primo = True
+    for i in range(2, int(a**0.5) + 1):
+        if a % i == 0:
+            es_primo = False
+            break
+
+    if es_primo:
+        print("El número es primo")
+    else:
+        print("No es primo :(")
